@@ -1,15 +1,15 @@
 import express from "express";
-import bordyParser from "bordy-parser";
+import bodyParser from "body-parser";
 import cors from "cors";
 
 
 const app = express();
-const port = 3000;
+const port = 5000;
 
-app,use(bordyParser.json());
-app,use(cors());
+app.use(bodyParser.json());
+app.use(cors());
 
-app,get("/",(req,res)=> res,send ("Hello From Express"));
-app,listen (port , () => console.log ('server is listening on port: http://localhost:${port}')
+app.get("/",(req,res)=> res.send ("Hello From Express"));
+app.listen (port , () => console.log ('server is listening on port: http://localhost:5000')
 
 );
