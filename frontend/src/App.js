@@ -5,6 +5,8 @@ import { BrowserRouter, Switch, Route} from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AddEdit from './pages/AddEdit';
+import Home from './pages/Home';
+
 import View from './pages/View';
 import About from './pages/About';
 
@@ -15,7 +17,7 @@ function App() {
     <ToastContainer/>
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route  path="/add" component={AddEdit}/>
+      <Route path="/add" component={AddEdit}/>
       <Route exact path="/update/:id" component={AddEdit} />
       <Route exact path="/view/:id" component={View} />
       <Route exact path="/about" component={About} />
